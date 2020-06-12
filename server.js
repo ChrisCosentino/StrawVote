@@ -11,7 +11,7 @@ connectDB();
 // //this allows us to get the json body in a post request(removing it gives undefined)
 app.use(express.json({ extended: false }));
 
-app.get('/', (req, res) => res.send('api running'));
+// app.get('/', (req, res) => res.send('api running'));
 
 app.use('/api/poll', require('./routes/api/poll'));
 
