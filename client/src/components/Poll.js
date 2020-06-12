@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import Loader from 'react-loader-spinner';
 import { RadioButton, RadioGroup } from 'react-radio-buttons';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
@@ -55,7 +55,7 @@ const Poll = (props) => {
     }
 
     const createNotification = () => {
-        NotificationManager.success('Copied', 'Success');
+        NotificationManager.success('Share this link to others!', 'Copied!');
     }
 
 
@@ -148,10 +148,11 @@ const Poll = (props) => {
                 :
                 <input type="submit" className="btn" id="submit-vote-btn" value="Submit" disabled/>
                 }   
+                
             </form>
+            <Link to={props.match.params.id+'/results'} className="btn" id="results-btn">See Results</Link>
         </div>
     )
-     
 }
 
 export default Poll

@@ -10,8 +10,8 @@ const CreatePoll = () => {
     const [formData, setFormData] = useState({
         question: '',
         options: [
-            {option: 'hey'},
-            {option: 'apples'}
+            {option: ''},
+            {option: ''}
         ]
     });
 
@@ -72,7 +72,7 @@ const CreatePoll = () => {
         return (
             <form onSubmit={handleSubmit} className="create-container">
                 <input 
-                    placeholder="enter your question"
+                    placeholder="Enter your question..."
                     id="question" 
                     type="text" 
                     onChange={handleQuestionChange}
@@ -86,7 +86,7 @@ const CreatePoll = () => {
                             <div className="option-input-container">
                             <input 
                                 
-                                placeholder="option" 
+                                placeholder="..." 
                                 id="option"
                                 type="text" 
                                 value={opt.option}
@@ -99,7 +99,7 @@ const CreatePoll = () => {
                 })}
                 </div>
                 <div className="add-remove-container">
-                    {options.length !== 1 ? 
+                    {options.length > 2 ? 
                     <button className="btn" id="sub-btn" type="button" onClick={removeOption}><GrSubtract /></button>
                     : <button className="btn" id="sub-btn" type="button" onClick={removeOption} disabled><GrSubtract /></button>}
                     
