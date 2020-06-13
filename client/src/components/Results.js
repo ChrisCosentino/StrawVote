@@ -84,7 +84,7 @@ const Results = (props) => {
     }
 
     const createNotification = () => {
-        NotificationManager.success('Copied', 'Success');
+        NotificationManager.success('Share this link to others!', 'Copied!');
     }
     
     return (

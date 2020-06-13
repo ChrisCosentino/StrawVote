@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Landing from './components/Landing';
@@ -12,9 +12,6 @@ import { NotificationContainer } from 'react-notifications';
 
 import './styles.css';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-
-
-
 
 const App = () => {
   return(
